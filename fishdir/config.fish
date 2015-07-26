@@ -11,6 +11,7 @@ set fish_theme bobthefish
 # Enable plugins by adding their name separated by a space to the line below.
 set fish_plugins theme
 
+set -g __fish_vi_mode 1
 set -U fish_key_bindings fish_user_key_bindings
 
 
@@ -22,10 +23,6 @@ set -U fish_key_bindings fish_user_key_bindings
 
 function ll
 	ls --human-readable -l
-end
-
-function testg
-	echo "testg"
 end
 
 function myman
