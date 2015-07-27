@@ -12,7 +12,7 @@ function fish_mode_prompt --description "Displays the current mode"
         # echo ' ✍ '
       case replace-one
         set_color --bold green
-        echo ' ꔸ '
+        echo ' ꔸ '
       case visual
         set_color --bold --background magenta white
         echo '[V]'
