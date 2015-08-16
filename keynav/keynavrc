@@ -1,0 +1,45 @@
+alt+semicolon start,grid 4x3
+
+semicolon cell-select 1,warp
+a cell-select 2,warp
+quoteright cell-select 3,warp
+
+comma cell-select 4,warp
+o cell-select 5,warp
+q cell-select 6,warp
+
+period cell-select 7,warp
+e cell-select 8,warp
+j cell-select 9,warp
+
+p cell-select 10,warp
+u cell-select 11,warp
+k cell-select 12,warp
+
+alt+h move-left,warp
+alt+j move-down,warp
+alt+k move-up,warp
+alt+l move-right,warp 
+
+BackSpace history-back
+
+g warp, click 1
+c warp, click 3
+shift+h cut-left,warp
+shift+j cut-down,warp
+shift+k cut-up,warp
+shift+l cut-right,warp
+
+shift+space warp,drap 1
+
+plus grid 4x3
+
+t grid 1x1,cursorzoom 100 100
+n grid 1x1,cursorzoom 50 50
+s grid 1x1,cursorzoom 10 10
+
+minus grid 1x1,warp
+
+
+
+
