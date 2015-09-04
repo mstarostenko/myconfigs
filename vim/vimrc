@@ -74,6 +74,7 @@ NeoBundle 'vim-scripts/DirDiff.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'wellsjo/wells-colorscheme.vim'
 NeoBundle 'morhetz/gruvbox'
+NeoBundle 'sickill/vim-monokai'
 
 " Allow autoclose paired characters like [,] or (,),
 " and add smart cursor positioning inside it,
@@ -206,6 +207,11 @@ NeoBundle 'kien/ctrlp.vim'
 " CtrlP-Funky
 NeoBundle 'tacahiroy/ctrlp-funky'
 
+" CtrlP-Funky
+NeoBundle 'seletskiy/vim-nunu'
+
+NeoBundle 'guns/xterm-color-table.vim'
+
 " JShint :)
 " But not necessary with syntastics
 " NeoBundle 'walm/jshint.vim'
@@ -256,9 +262,11 @@ let g:syntastic_filetype_map = { "json": "javascript", }
 " open quicfix window with all error found
 nmap <silent> <leader>ll :Errors<cr>
 " previous syntastic error
-nmap <silent> { :lprev<cr>
+" TODO
+" nmap <silent> { :lprev<cr>
 " next syntastic error
-nmap <silent> } :lnext<cr>
+" TODO
+" nmap <silent> } :lnext<cr>
 " first syntastic error
 nmap <silent> <leader>{ :lfirst<cr>
 
@@ -310,7 +318,7 @@ nmap <silent> <leader>tn :TernRename<CR>
 " Solarized
 
 " if You have problem with background, uncomment this line
-" let g:solarized_termtrans=1
+let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 
 "-------------------------
@@ -428,10 +436,23 @@ call arpeggio#map('i', '', 0, 'jk', '<ESC>')
 set background=dark
 
 " Use wells-colors colorscheme
-colorscheme gruvbox
+" colorscheme torte
+" colorscheme gruvbox
+colorscheme solarized
+let g:gruvbox_contrast_dark = 'soft'
 
+hi CursorLine None ctermbg=0
+hi CursorLineNr ctermbg=24
+hi LineNr         ctermbg=0
+hi Directory        ctermfg=81
+" hi Search guibg=LightBlue
+highlight ColorColumn ctermbg=0
+" highlight LineNr ctermfg=64 ctermbg=235
+
+nnoremap <F9> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+
+" colorscheme solarized
 " set highlighting for colorcolumn
-highlight ColorColumn ctermbg=8
 
 "--------------------------------------------------
 " General options
@@ -763,10 +784,10 @@ function! ctrlp#funky#ft#javascript#filters()
     return filters
 endfunction
 
-nnoremap <silent> <F5> :vertical resize -5<CR>
-nnoremap <silent> <F6> :vertical resize +5<CR>
-nnoremap <silent> <F7> :resize -5<CR>
-nnoremap <silent> <F8> :resize +5<CR>
+nnoremap <silent> <F5> :resize -5<CR>
+nnoremap <silent> <F6> :resize +5<CR>
+nnoremap <silent> <F7> :vertical resize -5<CR>
+nnoremap <silent> <F8> :vertical resize +5<CR>
 
 set pastetoggle=<F4>
 
@@ -781,7 +802,6 @@ cnoreabbrev qq tabclose
 inoremap jk <ESC> 
 
 " NERDTree: вкл - выкл NERDTree обозреватель
-map <F2> :NERDTreeToggle<CR>
 map ,t :NERDTreeToggle<CR>
 
 " NERDTree: reveal file in the tree
