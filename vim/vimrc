@@ -38,6 +38,7 @@ if system('uname -o') =~ '^GNU/'
     let g:make = 'make'
 endif
 
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'scss']  }
 "--------------------------------------------------
 " Bundles
 
@@ -95,14 +96,28 @@ if !executable("jshint")
     endif
 endif
 " Path to csslint if it not installed globally, then use local installation
-if !executable("csslint")
-    let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
-    if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
-        silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
-    endif
-endif
+" TODO
+" if !executable("csslint")
+"     let g:syntastic_css_csslint_exec='~/.vim/node_modules/.bin/csslint'
+"     if isNpmInstalled && !executable(expand(g:syntastic_css_csslint_exec))
+"         silent ! echo 'Installing csslint' && npm --prefix ~/.vim/ install csslint
+"     endif
+" endif
+"
 
-" Great file system explorer, it appears when you open dir in vim
+" Nerd tree and other plugins dev icon
+" NeoBundle 'ryanoasis/vim-devicons'
+
+" let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+" let g:WebDevIconsNerdTreeAfterGlyphPagging = '  '
+" let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['nerdtree'] = ''
+
+
+
+
+
+
+" 
 " Allow modification of dir, and may other things
 " Must have
 NeoBundle 'scrooloose/nerdtree'
@@ -210,7 +225,23 @@ NeoBundle 'tacahiroy/ctrlp-funky'
 " CtrlP-Funky
 NeoBundle 'seletskiy/vim-nunu'
 
+" :XtermColorTable выводит в отдельном окне цвета терминала
 NeoBundle 'guns/xterm-color-table.vim'
+
+" решает проблему с base64 медленным распарсингом
+NeoBundle 'cakebaker/scss-syntax.vim'
+
+
+" Silver search for Nerd tree
+" 0 установить глобано ag
+"
+" 1 install ag silver-search for vim
+" Поисковка silver-search для vim
+NeoBundle 'rking/ag.vim'
+
+" 2 install ag silver-search for nerd-tree
+" Поисковка silver-search для nerd-tree
+NeoBundle 'taiansu/nerdtree-ag'
 
 " JShint :)
 " But not necessary with syntastics
@@ -342,7 +373,8 @@ imap <expr><CR> neosnippet#expandable_or_jumpable() ?
 " vim-airline
 
 " Colorscheme for airline
-let g:airline_theme='understated'
+let g:airline_theme='solarized'
+
 
 " Set custom left separator
 let g:airline_left_sep = '▶'
