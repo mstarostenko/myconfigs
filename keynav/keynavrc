@@ -1,25 +1,26 @@
 alt+semicolon start,grid 4x3
 
-semicolon cell-select 1,warp
-a cell-select 2,warp
-quoteright cell-select 3,warp
+ampersand cell-select 1,warp
+semicolon cell-select 2,warp
+a cell-select 3,warp
 
-comma cell-select 4,warp
-o cell-select 5,warp
-q cell-select 6,warp
+bracketleft cell-select 4,warp
+comma cell-select 5,warp
+o cell-select 6,warp
 
-period cell-select 7,warp
-e cell-select 8,warp
-j cell-select 9,warp
+braceleft cell-select 7,warp
+period cell-select 8,warp
+e cell-select 9,warp
 
+
+braceright cell-select 10,warp
 p cell-select 10,warp
 u cell-select 11,warp
-k cell-select 12,warp
 
-alt+h move-left,warp
-alt+j move-down,warp
-alt+k move-up,warp
-alt+l move-right,warp 
+h move-left,warp
+j move-down,warp
+k move-up,warp
+l move-right,warp
 
 BackSpace history-back
 

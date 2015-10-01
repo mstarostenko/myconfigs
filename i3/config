@@ -144,5 +144,6 @@ bar {
 }
 
 exec chromium-browser &
+exec keynav
 exec setxkbmap -layout us,ru -variant 'dvp,'
 
