@@ -145,5 +145,6 @@ bar {
 
 exec chromium-browser &
 exec keynav
-exec setxkbmap -layout us,ru -variant 'dvp,'
+exec xset r rate 200 50
+exec setxkbmap -layout us,ru -variant 'dvp,' ,winkeys -option grp:caps_toggle,grp_led:scroll,terminate:ctrl_alt_bksp,compose:ralt
 

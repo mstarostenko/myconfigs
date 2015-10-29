@@ -261,6 +261,12 @@ syntax on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" -------------------------------------------------
+"  MAPLEADER: leader redefine
+" -------------------------------------------------
+" Set up leader key <leader>, i use default \
+let mapleader = '-'
+
 "--------------------------------------------------
 " Bundles settings
 
@@ -495,8 +501,6 @@ nnoremap <F9> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 " Enable per-directory .vimrc files and disable unsafe commands in them
 "set exrc secure
 
-" Set up leader key <leader>, i use default \
-"let mapleader = ','
 
 " Buffer will be hidden instead of closed when no one display it
 "set hidden
@@ -705,7 +709,7 @@ set backspace=indent,eol,start
 set pastetoggle=<leader>p
 
 " Add '-' as recognized word symbol. e.g dw delete all 'foo-bar' instead just 'foo'
-set iskeyword+=-
+" set iskeyword+=-
 
 " Disable backups file
 set nobackup
